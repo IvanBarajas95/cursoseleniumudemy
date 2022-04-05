@@ -1,7 +1,9 @@
-Feature: Probar la búsqueda en Google
+Feature: Test Google search functionality
 
-Scenario: Busco algo en Google 
-    Given navego a google
-    When busco algo
-    Then obtengo resultados
-    
+Scenario: As a user I enter a search criteria in Google
+    Given I am on the Google search page
+    When I enter a search criteria
+    And click on the search button
+    Then the results match the criteria
+
+
