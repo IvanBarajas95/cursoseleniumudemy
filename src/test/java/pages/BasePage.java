@@ -51,6 +51,29 @@ public class BasePage {
         Find(locator).click();
     }
 
+    public void write(String locator, String textToWrite) {
+        Find(locator).clear();
+        Find(locator).sendKeys(textToWrite);
+    }
+
+    public void selectFromDropdownByValue(String locator, String valueToSelect){
+        Select dropdown = new Select(Find(locator));
+
+        dropdown.selectByValue(valueToSelect);
+    }
+
+    public void selectFromDropdownByIndex(String locator, int valueToSelect){
+        Select dropdown = new Select(Find(locator));
+
+        dropdown.selectByIndex(valueToSelect);
+    }
+
+    public void selectFromDropdownByText(String locator, String valueToSelect){
+        Select dropdown = new Select(Find(locator));
+
+        dropdown.selectByVisibleText(valueToSelect);
+    }
+
 }
 
 
